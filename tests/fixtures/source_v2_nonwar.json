@@ -1,0 +1,15 @@
+{
+  "kind": "synthetic raw-source regression; timestamps are simulated, not historical latency",
+  "expected_level": "WATCH",
+  "max_allowed_level": "WATCH",
+  "sources": [
+    {"id":"seismic","publisher":"EMSC","operator_country":"FR","kind":"emsc_ws","url":"wss://www.seismicportal.eu/standing_order/websocket","source_type":"sensor","reliability":0.95},
+    {"id":"aviation","publisher":"adsb.fi","operator_country":"UNKNOWN","kind":"adsb","url":"https://opendata.adsb.fi/api/v3/lat/37.5/lon/127/dist/250","source_type":"sensor","reliability":0.5},
+    {"id":"news","publisher":"fixture","operator_country":"US","url":"https://example.org/rss"}
+  ],
+  "source_records": [
+    {"source_id":"seismic","received_at":"2026-01-01T00:00:01+00:00","content":{"action":"create","data":{"properties":{"auth":"NEIC","lat":37.5,"lon":127,"mag":3.1,"unid":"fixture-quake","time":"2026-01-01T00:00:00Z"}}}},
+    {"source_id":"aviation","received_at":"2026-01-01T00:00:02+00:00","content":{"now":1767225600000,"ac":[{"hex":"fixture","type":"adsb_icao","squawk":"7700","lat":37.5,"lon":127,"seen":0,"seen_pos":0}]}},
+    {"source_id":"news","received_at":"2026-01-01T00:00:03+00:00","content":"<rss version=\"2.0\"><channel><title>Fixture</title><item><title>Seoul military exercise simulates artillery attack</title><link>https://example.org/drill</link><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate></item><item><title>Reuters: Seoul condemns artillery attack on Gaza</title><link>https://example.org/foreign</link><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate></item></channel></rss>"}
+  ]
+}

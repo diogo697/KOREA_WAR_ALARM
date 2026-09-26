@@ -1,0 +1,38 @@
+{
+  "kind": "synthetic — not a historical observation",
+  "expected_level": "CRITICAL",
+  "events": [
+    {
+      "source_id": "fixture-osint", "publisher": "Synthetic OSINT",
+      "evidence_family": "fixture-osint", "origin_claim": "original", "source_type": "osint",
+      "category": "ARTILLERY_ATTACK", "title": "SYNTHETIC: Korea artillery fire reported near Seoul",
+      "location": "seoul", "latitude": 37.5, "longitude": 127,
+      "published_at": "2026-01-01T00:00:00Z", "observed_at": "2026-01-01T00:00:00Z", "received_at": "2026-01-01T00:00:00Z",
+      "source_reliability": 0.55, "raw_reference": "https://example.org/synthetic/osint"
+    },
+    {
+      "source_id": "fixture-wire-a", "publisher": "Synthetic Wire A",
+      "evidence_family": "fixture-wire-a", "origin_claim": "original", "source_type": "news",
+      "category": "ARTILLERY_ATTACK", "title": "SYNTHETIC: Seoul artillery attack observed by wire A",
+      "location": "seoul", "latitude": 37.5, "longitude": 127,
+      "published_at": "2026-01-01T00:00:12Z", "observed_at": "2026-01-01T00:00:12Z", "received_at": "2026-01-01T00:00:12Z",
+      "source_reliability": 0.9, "raw_reference": "https://example.org/synthetic/wire-a"
+    },
+    {
+      "source_id": "fixture-wire-b", "publisher": "Synthetic Wire B",
+      "evidence_family": "fixture-wire-b", "origin_claim": "original", "source_type": "news",
+      "category": "ARTILLERY_ATTACK", "title": "SYNTHETIC: independent wire B verifies Seoul shelling",
+      "location": "seoul", "latitude": 37.5, "longitude": 127,
+      "published_at": "2026-01-01T00:00:20Z", "observed_at": "2026-01-01T00:00:20Z", "received_at": "2026-01-01T00:00:20Z",
+      "source_reliability": 0.9, "raw_reference": "https://example.org/synthetic/wire-b"
+    },
+    {
+      "source_id": "fixture-sensor", "publisher": "Synthetic Sensor",
+      "evidence_family": "fixture-sensor", "origin_claim": "original", "source_type": "sensor",
+      "category": "SEISMIC_EVENT", "title": "SYNTHETIC: Korean seismic observation near Seoul",
+      "location": "seoul", "latitude": 37.51, "longitude": 127.01,
+      "published_at": "2026-01-01T00:00:35Z", "observed_at": "2026-01-01T00:00:35Z", "received_at": "2026-01-01T00:00:35Z",
+      "source_reliability": 0.95, "raw_reference": "https://example.org/synthetic/sensor"
+    }
+  ]
+}

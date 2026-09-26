@@ -1,0 +1,84 @@
+database: data/kwa.sqlite
+retention_days: 30
+incident_ttl_seconds: 1800
+correlation_seconds: 180
+cooldown_seconds: 300
+threshold: HIGH
+desktop: true
+sound: true
+cors_origins: []
+rate_limit_per_minute: 0
+sources:
+  - id: democracy-now
+    publisher: Democracy Now!
+    url: https://www.democracynow.org/democracynow.rss
+    operator_country: US
+    source_type: news
+    reliability: 0.8
+    enabled: true
+    terms_reviewed: true
+    license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/us/
+  - id: common-dreams
+    publisher: Common Dreams
+    url: https://www.commondreams.org/feeds/feed.rss
+    operator_country: US
+    source_type: news
+    reliability: 0.75
+    enabled: true
+    terms_reviewed: true
+    license_url: https://www.commondreams.org/republish-our-work
+  - id: global-voices
+    publisher: Global Voices
+    url: https://globalvoices.org/feed/
+    operator_country: NL
+    source_type: osint
+    signal_type: OSINT
+    reliability: 0.7
+    poll_seconds: 300
+    enabled: true
+    terms_reviewed: true
+    license_url: https://creativecommons.org/licenses/by/3.0/
+  - id: usgs
+    publisher: USGS
+    url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson
+    operator_country: US
+    government: true
+    kind: usgs
+    source_type: sensor
+    signal_type: SEISMIC
+    evidence_family: usgs
+    stale_after_seconds: 180
+    reliability: 0.95
+    poll_seconds: 60
+    enabled: true
+    terms_reviewed: true
+  - id: emsc-push
+    publisher: EMSC/CSEM
+    url: wss://www.seismicportal.eu/standing_order/websocket
+    operator_country: FR
+    kind: emsc_ws
+    source_type: sensor
+    signal_type: SEISMIC
+    evidence_family: usgs
+    reliability: 0.95
+    poll_seconds: 30
+    min_poll_seconds: 15
+    enabled: true
+    terms_reviewed: true
+    license_url: https://www.seismicportal.eu/realtime.html
+  - id: adsb-fi
+    publisher: adsb.fi
+    url: https://opendata.adsb.fi/api/v3/lat/37.5/lon/127/dist/250
+    operator_country: UNKNOWN
+    kind: adsb
+    source_type: sensor
+    signal_type: AVIATION
+    evidence_family: adsb-receiver-network
+    reliability: 0.5
+    poll_seconds: 30
+    min_poll_seconds: 5
+    stale_after_seconds: 120
+    enabled: true
+    terms_reviewed: true
+    license_url: https://github.com/adsbfi/opendata
+webhooks: []

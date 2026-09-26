@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한국 전쟁 경보기</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header><div class="brand"><span class="logo" aria-hidden="true">KWA</span><div><small>KOREA WAR ALARM / OPEN SIGNAL INTELLIGENCE</small><h1>한국 전쟁 경보기</h1></div></div><div class="session"><span id="mode">CONNECTING</span><time id="clock"></time></div></header>
+    <div class="hero"><div class="intro"><small>01 / PUBLIC-SOURCE EARLY WARNING</small><h2>The first warning<br>shouldn't be <em>the blast.</em></h2><p>헤드라인을 기다리는 대신, 공개 신호를 지켜봅니다.<br>독립된 근거를 교차 확인하는 한국 전쟁 위험 모니터.</p><div class="tags"><span>NO SIGN-UP</span><span>NO PAID API</span><span>RULE-BASED</span></div></div><section class="current"><small>CURRENT ALERT / 현재 관측 수준</small><h2 id="level">—</h2><p id="summary">Core 상태를 확인하는 중</p><div class="scale"><span>INFO</span><span>WATCH</span><span>WARNING</span><span>HIGH</span><span>CRITICAL</span></div><div class="current-foot"><span id="connection" role="status">연결 대기</span><span>INFO ≠ ALL-CLEAR</span></div></section></div>
+    <aside id="coverage" role="status">수집 범위 확인 중</aside>
+    <div class="metrics"><div><small>HEALTHY COLLECTORS</small><strong id="collector-count">—</strong><span>정상 수집 소스</span></div><div><small>VERIFIED FAMILIES</small><strong id="family-count">—</strong><span>활성 소스의 검증된 출처 계열</span></div><div><small>ACTIVE INCIDENTS</small><strong id="incident-count">—</strong><span>현재 관측 중인 사건</span></div><div><small>END-TO-END LATENCY</small><strong class="unmeasured">NOT MEASURED</strong><span>실제 사건 → 사용자 전달 / 미측정</span></div></div>
+    <div class="workspace"><section class="network"><div class="panel-heading"><div><small>02 / SOURCE NETWORK</small><h2>Signals across borders.</h2></div><span class="chip">PUBLIC FEEDS</span></div><p id="source-summary"></p><div class="source-head"><span>SOURCE / SIGNAL</span><span>HEALTH</span><span>REQUEST RTT</span></div><div id="sources"></div><p class="note">응답 시간은 탐지 지연이 아님. 같은 원출처의 신호는 독립 근거로 중복 계산하지 않음.</p></section><div class="stack"><section><small>03 / CORRELATED EVIDENCE</small><h2>Evidence, not noise.</h2><div id="incidents"></div><p class="note">단일 신호만으로 전쟁을 단정하지 않음.<br>공개 정보의 누락·지연·오탐 가능.</p></section><section class="stream"><small>04 / EVENT STREAM</small><h2>실시간 이벤트 <span class="pulse"></span></h2><ol id="events"></ol></section></div></div>
+    <details class="technical"><summary>사건 상세 · 근거 출처 / CONNECTION SETTINGS</summary><pre id="detail">사건을 선택하면 수집 시각과 출처 계열을 확인할 수 있음.</pre><form id="auth"><label>서버 인증 <input id="token" type="password" autocomplete="off" placeholder="기본 로컬 실행에는 필요 없음"></label><button>연결</button></form></details>
+    <footer><div><strong>EXPERIMENTAL. TRANSPARENT. ALWAYS IN CONTEXT.</strong><p>공개 신호 기반 실험적 모니터. 공식 재난 안내를 대체하지 않으며, INFO는 안전 확인을 의미하지 않음.</p><p>Aircraft data: <a href="https://adsb.fi/">adsb.fi</a> · Seismic stream: <a href="https://www.seismicportal.eu/">EMSC / CC BY 4.0</a></p></div><div><a href="/docs">OPEN API ↗</a><p id="heartbeat"></p></div></footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

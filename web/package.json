@@ -1,0 +1,7 @@
+{
+  "name": "kwa-reference-ui",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {"build": "tsc -p tsconfig.json", "check": "tsc -p tsconfig.json --noEmit", "test": "playwright test"},
+  "devDependencies": {"typescript": "7.0.2", "@playwright/test": "1.63.0"}
+}
