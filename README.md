@@ -14,9 +14,11 @@
 
 Korea War Alarm has a specific goal: **help people learn of the outbreak of war or armed attack on the Korean Peninsula as quickly as possible.** It continuously collects public reporting and observations, connects related evidence, and delivers changes through a dashboard and configured notification channels. The focus is the time between information becoming available and reaching the user.
 
-### Source-first monitoring
+### Collection Strategy
 
-**The collection strategy prioritizes the most authoritative, traceable sources available outside South Korean public institutions.** South Korean government, military, and public-agency feeds are excluded. The current source layer combines USGS seismic observations, reviewed USGS/NEIC solutions delivered through EMSC, international news and citizen journalism, and civil aviation emergency indications from adsb.fi. Each source has a defined role and reliability weight in the alert policy.
+The system prioritizes signals that can be traced to their original sources and cross-validated where possible. It currently combines USGS seismic observations, verified USGS/NEIC observations relayed through EMSC, international news and citizen-journalism sources, and civil-aviation emergency signals from adsb.fi.
+
+Each source is evaluated according to its role and reliability before contributing to an alert decision.
 
 Reports are compared by time, location, and original source. Repeated coverage of one announcement is grouped by provenance, while independent evidence contributes to a rule-based assessment of the incident.
 
